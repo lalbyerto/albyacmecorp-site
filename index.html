@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acme Billing Cloud – Billing and subscriptions for growing businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+  :root{--ink:#1e2a4a;--ink-soft:#4b5675;--paper:#f7f8fa;--white:#ffffff;--mint:#3ccf91;--mint-soft:#e3f8ee;--line:#e2e5ec}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 'Manrope',Arial,sans-serif}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{background:var(--white);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+  .logo{font-weight:800;font-size:20px;display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo i{width:28px;height:28px;border-radius:8px;background:var(--ink);display:inline-grid;place-items:center;color:var(--mint);font-style:normal;font-size:15px}
+  nav{display:flex;gap:22px;font-weight:600;font-size:15px;flex-wrap:wrap}
+  nav a{text-decoration:none;color:var(--ink-soft)}
+  .hero{padding-block:72px 56px}
+  .hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:0 0 18px;font-weight:800;letter-spacing:-.02em;max-width:16ch}
+  .hero p{font-size:19px;color:var(--ink-soft);max-width:56ch;margin:0 0 28px}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none}
+  .btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+  section{padding:48px 0}
+  h2{font-size:30px;margin:0 0 8px;letter-spacing:-.01em}
+  .sub{color:var(--ink-soft);margin:0 0 28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{margin:0 0 6px;font-size:19px}
+  .price{font-size:32px;font-weight:800;margin:6px 0}
+  .price small{font-size:15px;color:var(--ink-soft);font-weight:600}
+  .card ul{padding-left:18px;margin:10px 0 0;color:var(--ink-soft)}
+  .card.hl{border:2px solid var(--mint)}
+  .tag{display:inline-block;background:var(--mint-soft);color:#16734d;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
+  .help{background:var(--ink);color:var(--white);border-radius:20px;padding:36px;display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+  .help p{color:#c7cde0}
+  .help ul{margin:0;padding-left:18px;color:#c7cde0;columns:1}
+  .help li{margin:4px 0}
+  .help .hours{background:rgba(255,255,255,.08);border-radius:14px;padding:18px}
+  .help .hours b{color:var(--mint)}
+  footer{padding:32px 0 48px;color:var(--ink-soft);font-size:14px}
+  .demo-note{position:fixed;left:16px;bottom:16px;background:var(--white);border:2px dashed var(--ink-soft);border-radius:10px;padding:8px 12px;font-size:13px;max-width:260px}
+  @media (max-width:760px){.help{grid-template-columns:1fr}.btn.alt{margin:10px 0 0}}
+</style>
+
+<!-- DevRev PLuG SDK (Computer for Customer Experience). Docs: developer.devrev.ai/sdks/web/installation -->
+<script type="text/javascript" src="https://plug-platform.devrev.ai/static/plug.js"></script>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="#"><i>A</i>Acme Billing Cloud</a>
+  <nav><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#help">Help</a></nav>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <h1>Billing and subscriptions, without the spreadsheets</h1>
+  <p>Acme Billing Cloud sends invoices, collects payments and manages subscriptions for 1,800 growing businesses in Europe, North America and APAC.</p>
+  <a class="btn" href="#pricing">See plans</a><a class="btn alt" href="#help">Get help</a>
+</div>
+
+<section id="features"><div class="wrap">
+  <h2>Everything you need to get paid</h2>
+  <p class="sub">One platform from the first invoice to the renewal.</p>
+  <div class="grid">
+    <div class="card"><h3>Invoicing</h3><p>Branded invoices with automatic VAT, credit notes and PDF delivery.</p></div>
+    <div class="card"><h3>Subscriptions</h3><p>Plans, seats, upgrades and prorations handled for you.</p></div>
+    <div class="card"><h3>Integrations</h3><p>Salesforce, Xero, webhooks and a public REST API.</p></div>
+    <div class="card"><h3>Reporting</h3><p>Revenue dashboards, CSV exports and scheduled reports.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <h2>Simple pricing</h2>
+  <p class="sub">Prices per month, VAT excluded. Upgrade or downgrade any time.</p>
+  <div class="grid">
+    <div class="card"><h3>Starter</h3><div class="price">€49 <small>/ month</small></div><ul><li>5 seats</li><li>1 admin</li><li>60 API requests / min</li></ul></div>
+    <div class="card hl"><span class="tag">Most popular</span><h3>Growth</h3><div class="price">€199 <small>/ month</small></div><ul><li>25 seats</li><li>3 admins</li><li>Scheduled reports</li><li>300 API requests / min</li></ul></div>
+    <div class="card"><h3>Enterprise</h3><div class="price">Custom</div><ul><li>Unlimited seats and admins</li><li>SSO (Okta, Entra ID)</li><li>1,000 API requests / min</li></ul></div>
+  </div>
+</div></section>
+
+<section id="help"><div class="wrap">
+  <div class="help">
+    <div>
+      <h2>Need help?</h2>
+      <p>Ask our assistant in the chat at the bottom right. It answers from our Help Center at any hour, and if it can't solve your problem it creates a ticket for our team.</p>
+      <p><b>Popular questions</b></p>
+      <ul>
+        <li>How do I reset my password?</li>
+        <li>How do I add a new admin user?</li>
+        <li>What is my subscription status and renewal date?</li>
+        <li>Why is my invoice amount different than expected?</li>
+      </ul>
+    </div>
+    <div class="hours">
+      <p><b>Support team</b><br>Monday to Friday, 9:00–18:00 CET</p>
+      <p><b>AI assistant</b><br>24/7, in the chat</p>
+      <p><b>Email</b><br>support@acmebilling.example</p>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 AcmeCorp B.V., Amsterdam · Fictional company created for a product demo.</div></footer>
+
+<div class="demo-note" id="demo-note" hidden>PLuG chat widget: paste your DevRev app ID in <code>PLUG_APP_ID</code> to turn it on.</div>
+
+<script>
+  // Paste the "Unique App ID" from DevRev > Settings > PLuG here (keep the quotes).
+  const PLUG_APP_ID = "PASTE_YOUR_APP_ID";
+
+  if (PLUG_APP_ID && PLUG_APP_ID !== "PASTE_YOUR_APP_ID" && window.plugSDK) {
+    window.plugSDK.init({ app_id: PLUG_APP_ID });
+  } else {
+    document.getElementById("demo-note").hidden = false;  // reminder shown only until the widget is configured
+  }
+</script>
+</body>
+</html>
